@@ -1199,7 +1199,7 @@ h1 {
     font-size: 0.7rem;
     margin-top: 3vh;
     margin-left: 50px;
-    transform: scaleY(2);
+    transform: scaleY(2.5);
   }
   .home-header-center {
     text-align: center;
