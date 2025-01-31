@@ -2,13 +2,10 @@ import React, { useState } from "react";
 import { ChevronDown } from "lucide-react"; // Ensure you have lucide-react installed
 import { Link } from "react-router-dom";
 
-
 const HomeHeader = () => {
- 
   const [openDropdown, setOpenDropdown] = useState(null);
 
   const handleDropdownToggle = (section) => {
-    
     setOpenDropdown(openDropdown === section ? null : section);
   };
 
@@ -16,10 +13,9 @@ const HomeHeader = () => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }else {
+    } else {
       console.error("Section not found:", id);
     }
-
   };
 
   return (
@@ -32,8 +28,8 @@ const HomeHeader = () => {
       {/* Center: Title */}
       <div className="home-header-center">
         <h1 className="home-title">
-          <span>Rajiv Gandhi University of Knowledge Technologies,</span>
-          <br /> <span>Srikakulam - Campus 3</span>
+          <span className="university-name">Rajiv Gandhi University of Knowledge Technologies,</span>
+          <span className="campus-name">Srikakulam - Campus 3</span>
         </h1>
       </div>
 
@@ -41,7 +37,7 @@ const HomeHeader = () => {
       <nav className="home-header-right">
         <ul className="home-nav-menu">
           {/* Utilities Dropdown */}
-          <li className="home-nav-item dropdown"  >
+          <li className="home-nav-item dropdown">
             <span onClick={() => scrollToSection("utilities")}>Utilities</span>
             <ChevronDown
               size={16}
@@ -56,7 +52,7 @@ const HomeHeader = () => {
               </ul>
             )}
           </li>
-
+          
           {/* Events and About Sections */}
           <li className="home-nav-item" onClick={() => scrollToSection("events")}>Events</li>
           <li className="home-nav-item" onClick={() => scrollToSection("about")} >About</li>
@@ -67,5 +63,3 @@ const HomeHeader = () => {
 };
 
 export default HomeHeader;
-
-
