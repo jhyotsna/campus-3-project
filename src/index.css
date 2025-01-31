@@ -1182,7 +1182,7 @@ h1 {
     opacity:50%;
   }
 }
-
+ 
 @media (max-width: 480px) {
   .home-header {
     flex-direction: column;
@@ -1192,12 +1192,12 @@ h1 {
   }
 
   .logo {
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
   }
   .home-title span:first-child{
-    font-size: 0.7rem;
-    margin-top: 3vh;
+    font-size: 1rem;
+    margin-top: 4vh;
     margin-left: 50px;
     transform: scaleY(1.5);
   }
@@ -1206,8 +1206,8 @@ h1 {
   }
   .home-title span:last-child{
     font-size: 0.7rem;
-    margin-top:-10px;
-    transform: scaleY(1);
+    margin-top:-5px;
+    transform: scaleY(0.8);
     
   }
   .home-nav-menu {
