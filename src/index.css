@@ -1207,7 +1207,7 @@ h1 {
   .home-title span:last-child{
     font-size: 0.7rem;
     margin-top:-10px;
-    transform: scaleY(1);
+    transform: scaleY(1.2);
     
   }
   .home-nav-menu {
