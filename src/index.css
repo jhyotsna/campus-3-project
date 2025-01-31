@@ -987,7 +987,7 @@ h1 {
 
 
 /* Home CSS */
-/*
+
 .home-header {
   background-color: #283e54;
   color: white;
@@ -1002,12 +1002,12 @@ h1 {
   display: flex;
   align-items: center;
   gap: 15px;
-  flex-grow: 0; 
+  flex-grow: 0; /* No need for left side to grow */
 }
 
 .home-header-center {
-  flex-grow: 2; 
-  text-align: center; 
+  flex-grow: 2; /* Take more space for centering title */
+  text-align: center; /* Center the title text */
 }
 
 .logo {
@@ -1027,17 +1027,18 @@ h1 {
 }
 .home-title span:first-child {
   display: block; 
-  transform: scaleY(1.5); 
+  transform: scaleY(1.5); /* Increase height without affecting width */
 }
+
 .home-title span:last-child {
   display: block;
-  margin-top: 10px; 
+  margin-top: 10px; /* Adjust this value as needed */
 }
 
 .home-header-right {
   display: flex;
   justify-content: flex-end;
-  flex-grow: 0.8; 
+  flex-grow: 0.8; /* Adjust space to the right */
 }
 
 .home-nav-menu {
@@ -1045,7 +1046,7 @@ h1 {
   gap: 50px;
   font-size: 1.3rem;
   font-weight: 500;
-  padding-top: 10px; 
+  padding-top: 10px; /* Added padding to push the items down */
 }
 
 .home-nav-item {
@@ -1060,9 +1061,9 @@ h1 {
 .home-nav-item:hover {
   color: #d1d5db;
 }
-*/
+
 /* Dropdown Menu */
-/*.home-dropdown-menu {
+.home-dropdown-menu {
   position: absolute;
   top: 100%;
   left:-10px;
@@ -1085,9 +1086,9 @@ h1 {
 .home-dropdown-menu li:hover {
   background-color: #f3f4f6;
 }
-*/
+
 /* Responsive Header */
-/*@media (max-width: 1024px) {
+@media (max-width: 1024px) {
   .home-header {
     padding: 10px 15px;
   }
@@ -1106,7 +1107,7 @@ h1 {
     gap: 30px;
     font-size: 1.1rem;
   }
-}
+} 
 
 @media (max-width: 768px) {
   .home-header {
@@ -1131,25 +1132,57 @@ h1 {
 
 @media (max-width: 600px) {
   .home-header {
-    padding: 5px 10px;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
   }
 
   .logo {
     height: 50px;
     width: 50px;
     padding: 3px;
+  
   }
 
   .home-title {
     font-size: 1rem;
   }
 
+  .home-header-left {
+    position: absolute;
+    left: 10px;
+    
+  }
+
+  .home-header-center {
+    text-align: center;
+  }
+  .home-title span:first-child {
+    font-size: 1.1rem;
+    margin-left: 60px;
+    margin-top: 5vh;
+    margin-bottom:0vh ;
+    transform: scaleY(1.5);
+  }
+
+  .home-title span:last-child {
+    font-size: 1.2rem;
+    margin-top:-5px;
+    transform: scaleY(1);
+    /* padding: 0; */
+  }
+
   .home-nav-menu {
-    gap: 10px;
-    font-size: 0.9rem;
+    gap: 60px;
+    font-size: 1rem;
+    justify-content: center;
+    margin-top: -15px;
+    padding-left: 5px;
+    opacity:50%;
   }
 }
-
+/* 
 @media (max-width: 480px) {
   .home-header {
     padding: 4px 8px;
@@ -1158,156 +1191,30 @@ h1 {
   .logo {
     height: 40px;
     width: 40px;
-    padding: 2px;
   }
-
-  .home-title {
+  .home-title span:first-child{
+    font-size: 1.1rem;
+    margin-top: 50px;
+    margin-right: 10px;
+    transform: scaleY(1.3);
+    background-color: #ccc;
+  }
+  .home-title span:last-child{
     font-size: 0.9rem;
   }
-
   .home-nav-menu {
-    gap: 8px;
-    font-size: 0.8rem;
-  }
-}
-*/
-
-
-/* Updated Home CSS for better mobile responsiveness */
-
-.home-header {
-  background-color: #283e54;
-  color: white;
-  padding: 12px 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.home-header-top {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: flex-start;
-  padding-bottom: 10px;
-}
-
-.home-header-left {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.logo {
-  height: 85px;
-  width: 85px;
-  object-fit: contain;
-  background-color: #ffffff;
-  border-radius: 50%;
-  padding: 8px;
-}
-
-.home-header-center {
-  width: 100%;
-  text-align: center;
-}
-
-.home-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  white-space: nowrap;
-  width: 100%;
-}
-
-.home-subtitle {
-  font-size: 1.2rem;
-  margin-top: 5px;
-}
-
-.home-header-right {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.home-nav-menu {
-  display: flex;
-  gap: 20px;
-  font-size: 1.3rem;
-  font-weight: 500;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-@media (max-width: 768px) {
-  .home-header {
-    padding: 10px 15px;
-    text-align: center;
-  }
-
-  .home-header-top {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .logo {
-    height: 60px;
-    width: 60px;
-  }
-
-  .home-title {
-    font-size: 1.4rem;
-    width: 100%;
-    text-align: center;
-    white-space: normal;
-  }
-
-  .home-subtitle {
-    font-size: 1rem;
-  }
-
-  .home-header-right {
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .home-nav-menu {
-    flex-direction: row;
     gap: 15px;
-    font-size: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    font-size: 0.9rem;
   }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    height: 50px;
-    width: 50px;
-  }
-
   .home-title {
-    font-size: 1.2rem;
-    white-space: normal;
-  }
-
-  .home-subtitle {
     font-size: 0.9rem;
-  }
-
-  .home-nav-menu {
-    font-size: 0.9rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
   }
 }
+
+   */
+
+
+
 
 
 /* Carousel Container */
