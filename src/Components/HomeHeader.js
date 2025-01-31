@@ -20,21 +20,23 @@ const HomeHeader = () => {
 
   return (
     <header className="home-header">
-      {/* Left Side: Logo */}
-      <div className="home-header-left">
-        <img className="logo" src="https://www.rgukt.in/images/Logonew.png" alt="RGUKT logo" />
+      <div className="home-header-top">
+        {/* Left Side: Logo */}
+        <div className="home-header-left">
+          <img className="logo" src="https://www.rgukt.in/images/Logonew.png" alt="RGUKT logo" />
+        </div>
+
+        {/* Center: Title */}
+        <div className="home-header-center">
+          <h1 className="home-title">
+            <span className="university-name">Rajiv Gandhi University of Knowledge Technologies,</span>
+            <span className="campus-name">Srikakulam - Campus 3</span>
+          </h1>
+        </div>
       </div>
 
-      {/* Center: Title */}
-      <div className="home-header-center">
-        <h1 className="home-title">
-          <span className="university-name">Rajiv Gandhi University of Knowledge Technologies,</span>
-          <span className="campus-name">Srikakulam - Campus 3</span>
-        </h1>
-      </div>
-
-      {/* Right Side: Navigation Menu */}
-      <nav className="home-header-right">
+      {/* Navigation Menu */}
+      <nav className="home-header-bottom">
         <ul className="home-nav-menu">
           {/* Utilities Dropdown */}
           <li className="home-nav-item dropdown">
