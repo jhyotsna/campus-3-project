@@ -1182,7 +1182,7 @@ h1 {
     opacity:50%;
   }
 }
- 
+
 @media (max-width: 480px) {
   .home-header {
     flex-direction: column;
@@ -1192,22 +1192,22 @@ h1 {
   }
 
   .logo {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
   }
   .home-title span:first-child{
-    font-size: 0.8rem;
-    margin-top: 4vh;
+    font-size: 0.7rem;
+    margin-top: 3vh;
     margin-left: 50px;
-    transform: scaleY(1.5);
+    transform: scaleY(2);
   }
   .home-header-center {
     text-align: center;
   }
   .home-title span:last-child{
     font-size: 0.7rem;
-    margin-top:-5px;
-    transform: scaleY(0.8);
+    margin-top:-10px;
+    transform: scaleY(1);
     
   }
   .home-nav-menu {
