@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import Student_Faculty from "./Components/Student_Faculty";
 import Branches from "./Components/Branches";
 import TwoOptions from "./Components/TwoOptions";
@@ -16,6 +16,7 @@ import Home from "./Components/Home";
 import LoginSignup from "./LoginSignup";
 function App() {
   return (
+    <BrowserRouter>
     <Routes>
       
       <Route
@@ -213,7 +214,8 @@ function App() {
       element={<Request_Card name="Mani" />}
       >
       </Route>
-      </Routes>      
+      </Routes>   
+      </BrowserRouter>   
     
   );
 }
