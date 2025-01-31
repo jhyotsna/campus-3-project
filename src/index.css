@@ -1218,6 +1218,7 @@ h1 {
   font-size: 1.8rem;
   font-weight: 700;
   white-space: nowrap;
+  width: 100%;
 }
 
 .home-subtitle {
@@ -1234,9 +1235,11 @@ h1 {
 
 .home-nav-menu {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   font-size: 1.3rem;
   font-weight: 500;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -1247,7 +1250,7 @@ h1 {
 
   .home-header-top {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
   }
 
@@ -1257,9 +1260,10 @@ h1 {
   }
 
   .home-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     width: 100%;
     text-align: center;
+    white-space: normal;
   }
 
   .home-subtitle {
@@ -1267,15 +1271,18 @@ h1 {
   }
 
   .home-header-right {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     width: 100%;
+    justify-content: center;
   }
 
   .home-nav-menu {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 15px;
     font-size: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -1287,6 +1294,7 @@ h1 {
 
   .home-title {
     font-size: 1.2rem;
+    white-space: normal;
   }
 
   .home-subtitle {
@@ -1295,6 +1303,9 @@ h1 {
 
   .home-nav-menu {
     font-size: 0.9rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 }
 
