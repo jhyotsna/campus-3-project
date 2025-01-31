@@ -13,7 +13,6 @@ import StatusCheckPage from "./Components/StatusCheckPage";
 import CareTaker from "./Components/CareTaker";
 import Request_Card from "./Components/Request_Card";
 import Home from "./Components/Home";
-import Login_Signup from "./LoginSignup";
 import LoginSignup from "./LoginSignup";
 function App() {
   return (
