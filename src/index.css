@@ -1196,7 +1196,7 @@ h1 {
     width: 40px;
   }
   .home-title span:first-child{
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-top: 4vh;
     margin-left: 50px;
     transform: scaleY(1.5);
