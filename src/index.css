@@ -987,7 +987,7 @@ h1 {
 
 
 /* Home CSS */
-
+/*
 .home-header {
   background-color: #283e54;
   color: white;
@@ -1002,12 +1002,12 @@ h1 {
   display: flex;
   align-items: center;
   gap: 15px;
-  flex-grow: 0; /* No need for left side to grow */
+  flex-grow: 0; 
 }
 
 .home-header-center {
-  flex-grow: 2; /* Take more space for centering title */
-  text-align: center; /* Center the title text */
+  flex-grow: 2; 
+  text-align: center; 
 }
 
 .logo {
@@ -1027,18 +1027,17 @@ h1 {
 }
 .home-title span:first-child {
   display: block; 
-  transform: scaleY(1.5); /* Increase height without affecting width */
+  transform: scaleY(1.5); 
 }
-
 .home-title span:last-child {
   display: block;
-  margin-top: 10px; /* Adjust this value as needed */
+  margin-top: 10px; 
 }
 
 .home-header-right {
   display: flex;
   justify-content: flex-end;
-  flex-grow: 0.8; /* Adjust space to the right */
+  flex-grow: 0.8; 
 }
 
 .home-nav-menu {
@@ -1046,7 +1045,7 @@ h1 {
   gap: 50px;
   font-size: 1.3rem;
   font-weight: 500;
-  padding-top: 10px; /* Added padding to push the items down */
+  padding-top: 10px; 
 }
 
 .home-nav-item {
@@ -1061,9 +1060,9 @@ h1 {
 .home-nav-item:hover {
   color: #d1d5db;
 }
-
+*/
 /* Dropdown Menu */
-.home-dropdown-menu {
+/*.home-dropdown-menu {
   position: absolute;
   top: 100%;
   left:-10px;
@@ -1086,9 +1085,9 @@ h1 {
 .home-dropdown-menu li:hover {
   background-color: #f3f4f6;
 }
-
+*/
 /* Responsive Header */
-@media (max-width: 1024px) {
+/*@media (max-width: 1024px) {
   .home-header {
     padding: 10px 15px;
   }
@@ -1169,6 +1168,133 @@ h1 {
   .home-nav-menu {
     gap: 8px;
     font-size: 0.8rem;
+  }
+}
+*/
+
+
+/* Updated Home CSS for better mobile responsiveness */
+
+.home-header {
+  background-color: #283e54;
+  color: white;
+  padding: 12px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-header-top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+}
+
+.home-header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 85px;
+  width: 85px;
+  object-fit: contain;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.home-header-center {
+  width: 100%;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.home-header-right {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.home-nav-menu {
+  display: flex;
+  gap: 30px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .home-header {
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .home-header-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    height: 60px;
+    width: 60px;
+  }
+
+  .home-title {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+
+  .home-header-right {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .home-nav-menu {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+
+  .home-title {
+    font-size: 1.2rem;
+  }
+
+  .home-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .home-nav-menu {
+    font-size: 0.9rem;
   }
 }
 
